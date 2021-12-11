@@ -1,0 +1,24 @@
+{% block cark_newsletter_newsletter %}
+    {% set shopName = config('core.basicInformation.shopName') %}
+
+    <div class="register-newsletter">
+        {% block cark_newsletter_newsletter_control %}
+            <div class="custom-control custom-checkbox">
+                {% block cark_newsletter_newsletter_label %}
+                    <input type="checkbox"
+                           class="custom-control-input"
+                           id="newsletter"
+                           name="newsletter"
+                           value="1"
+                           {% if data.get('newsletter') or data.get('newsletter') is empty and isCheckedByDefault %}checked{% endif %}>
+                {% endblock %}
+
+                {% block cark_newsletter_newsletter_checkbox %}
+                    <label class="custom-control-label no-validation" for="newsletter">
+                        {{ 'cark-newsletter.account.registerNewsletter'|trans({'%shopname%': shopName})|sw_sanitize }}
+                    </label>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

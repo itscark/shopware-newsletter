@@ -1,0 +1,13 @@
+{% sw_extends "@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig" %}
+
+{% block cms_form_privacy_opt_in %}
+    {{ parent() }}
+
+    {% set newsletterRegisterCheckedDefault = config('CarkNewsletter.config.isCheckedByDefault') %}
+
+    {% block cark_newsletter_personal_fields_newsletter %}
+        {% sw_include '@CarkNewsletter/storefront/component/account/register-newsletter.html.twig' with {
+            'isCheckedByDefault': newsletterRegisterCheckedDefault
+        } %}
+    {% endblock %}
+{% endblock %}

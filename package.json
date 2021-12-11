@@ -1,0 +1,58 @@
+{
+    "name": "itscark-shopware-newsletter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "administration:lint": "npx eslint -c eslint/administration/.eslintrc.js --ignore-path eslint/administration/.eslintignore --ext .js,.vue,.html.twig src/Resources/app/administration/src",
+        "administration:lint:twig": "npx eslint -c eslint/administration/.eslintrc.js --ignore-path eslint/administration/.eslintignore --ext .html.twig src/Resources/app/administration/src",
+        "administration:lint-fix": "npm run administration:lint -- --fix",
+        "administration:lint:scss": "npx stylelint --config eslint/administration/.stylelintrc src/Resources/app/administration/src/**/*.scss",
+        "administration:lint:scss-fix": "npm run administration:lint:scss -- --fix",
+        "storefront:lint": "npx eslint --config eslint/storefront/.eslintrc.js ./src/Resources/app/storefront/src && npx stylelint --config eslint/storefront/stylelint.config.js ./src/Resources/app/storefront/src",
+        "storefront:lint-fix": "npx eslint --fix --config eslint/storefront/.eslintrc.js ../src/Resources/app/storefront/src && stylelint --fix --config eslint/storefront/stylelint.config.js ./src/Resources/app/storefront/src/scss",
+        "storefront:lint:js": "npx eslint --config eslint/storefront/.eslintrc.js ./src/Resources/app/storefront/src",
+        "storefront:lint:scss": "npx stylelint --config eslint/storefront/stylelint.config.js ./src/Resources/app/storefront/src",
+        "storefront:lint:scss-fix": "npm run storefront:lint:scss -- --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "homepage": "",
+    "dependencies": {
+        "@shopware-ag/eslint-config-base": "^1.0.0",
+        "eslint-friendly-formatter": "4.0.1",
+        "stylelint-junit-formatter": "0.2.2"
+    },
+    "devDependencies": {
+        "@iwavesmedia/semantic-release-composer": "^1.0.0",
+        "@semantic-release/changelog": "^5.0.1",
+        "@semantic-release/commit-analyzer": "^8.0.1",
+        "@semantic-release/git": "^9.0.0",
+        "@semantic-release/release-notes-generator": "^9.0.3",
+        "install": "^0.13.0",
+        "npm": "^7.20.6",
+        "semantic-release": "^17.4.4",
+        "babel-eslint": "10.1.0",
+        "eslint": "7.10.0",
+        "eslint-config-airbnb-base": "13.2.0",
+        "eslint-plugin-html": "6.0.0",
+        "eslint-plugin-import": "2.22.1",
+        "eslint-plugin-inclusive-language": "2.1.1",
+        "eslint-plugin-plugin-rules": "file:eslint/administration/eslint-rules/plugin-rules",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-twig-vue": "file:eslint/administration/twigVuePlugin",
+        "eslint-plugin-vue": "7.9.0",
+        "eslint-plugin-vuejs-accessibility": "^0.7.1",
+        "vue-eslint-parser": "7.6.0",
+        "stylelint": "13.13.1",
+        "stylelint-config-standard": "18.3.0",
+        "stylelint-scss": "3.9.2",
+        "eslint-loader": "2.2.1",
+        "stylelint-config-sass-guidelines": "6.0.0"
+    }
+}

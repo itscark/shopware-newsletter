@@ -1,0 +1,33 @@
+{
+    "branches": [
+        "main"
+    ],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        [
+            "@semantic-release/release-notes-generator",
+            {
+                "linkCompare": false,
+                "linkReferences": false
+            }
+        ],
+        [
+            "@semantic-release/changelog",
+            {
+                "changelogFile": "CHANGELOG.md"
+            }
+        ],
+        "@iwavesmedia/semantic-release-composer",
+        [
+            "@semantic-release/git",
+            {
+                "assets": [
+                    "CHANGELOG.md",
+                    "package.json",
+                    "composer.json"
+                ],
+                "message": "[skip ci] release: ${nextRelease.version} \n\n${nextRelease.notes}"
+            }
+        ]
+    ]
+}

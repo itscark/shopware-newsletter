@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/component/account/register.html.twig' %}
+
+{% block component_account_register_personal_fields %}
+    {{ parent() }}
+
+    {% set newsletterRegisterCheckedDefault = config('CarkNewsletter.config.isCheckedByDefault') %}
+
+    {% block cark_newsletter_personal_fields_newsletter %}
+        {% sw_include '@CarkNewsletter/storefront/component/account/register-newsletter.html.twig' with {
+            'isCheckedByDefault': newsletterRegisterCheckedDefault
+        } %}
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Newsletter</title>
+        <title lang="de-DE">Newsletter</title>
+
+        <input-field type="bool">
+            <name>isDirectSubscription</name>
+            <label>Enable subscription upon customer account activation</label>
+            <label lang="de-DE">Abonnement bei Freischaltung des Kundenkontos aktivieren</label>
+            <helpText>The newsletter subscription will be activated immediately along with the customer account. Otherwise another confirmation e-mail for the newsletter will be send after activation. Please take account of the legal regulations in your country.</helpText>
+            <helpText lang="de-DE">Das Newsletterabonnement wird direkt zusammen mit dem Kundenkonto aktiviert. Andernfalls wird nach der Aktivierung eine weitere Bestätigungs-E-Mail für den Newsletter verschickt. Bitte beachten Sie die rechtlichen Bestimmungen in Ihrem Land.</helpText>
+        </input-field>
+
+        <input-field type="bool">
+            <name>isDirectContactSubscription</name>
+            <label>Enable subscription upon contact form</label>
+            <label lang="de-DE">Abonnement bei Kontaktanfrage aktivieren</label>
+            <helpText>The newsletter subscription will be activated immediately along with the contact form. Otherwise another confirmation e-mail for the newsletter will be send after activation. Please take account of the legal regulations in your country.</helpText>
+            <helpText lang="de-DE">Das Newsletterabonnement wird direkt zusammen mit dem Kontaktformular aktiviert. Andernfalls wird nach der Aktivierung eine weitere Bestätigungs-E-Mail für den Newsletter verschickt. Bitte beachten Sie die rechtlichen Bestimmungen in Ihrem Land.</helpText>
+        </input-field>
+
+        <input-field type="bool">
+            <name>isCheckedByDefault</name>
+            <label>Newsletter option checked by default</label>
+            <label lang="de-DE">Newsletter-Option standardmäßig ausgewählt</label>
+            <helpText>The option to subscribe to the newsletter in the registration form will be selected by default. Please take account of the legal regulations in your country.</helpText>
+            <helpText lang="de-DE">Die Option für den Newsletter-Empfang wird im Anmeldeformular vorausgewählt. Bitte beachten Sie die rechtlichen Bestimmungen in Ihrem Land.</helpText>
+        </input-field>
+    </card>
+</config>

@@ -1,0 +1,50 @@
+{
+    "name": "itscark/shopware-newsletter",
+    "description": "Allow new customers to subscribe to the newsletter in the sign up form.",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Marc Peternell",
+            "email": "shopware@itscark.me",
+            "homepage": "https://itscark.me",
+            "role": "Manufacturer"
+        }
+    ],
+    "require": {
+        "shopware/core": "~6.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ItsCark\\Shopware\\Newsletter\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "ItsCark\\Shopware\\Newsletter\\CarkNewsletter",
+        "label": {
+            "en-GB": "Newsletter subscription upon registration",
+            "de-DE": "Newsletter Anmeldung bei Registrierung"
+        },
+        "description": {
+            "en-GB": "Register at Newsletter at the registration of your onlineshop. It's only one click per Checkbox needed. Very simple and comfortable for your customers.",
+            "de-DE": "Neukunden können sich direkt beim Registrieren für Ihren Newsletter anmelden. Es wird eine Checkbox hinzugefügt mit der Ihr Kunde per Klick in Ihrem Newsletter ist."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://itscark.me/",
+            "en-GB": "https://itscark.me/"
+        }
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "friendsofphp/php-cs-fixer": "^3.2",
+        "vimeo/psalm": "^4.10",
+        "psalm/plugin-symfony": "^3.0",
+        "symplify/easy-coding-standard": "^10.0"
+    },
+    "scripts": {
+        "fix": "vendor/bin/ecs check --fix",
+        "psalm": "./vendor/bin/psalm --output-format=phpstorm",
+        "psalm-info": "./vendor/bin/psalm --output-format=phpstorm --show-info=true"
+    }
+}
